@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+struct Bag {
+    int size;
+    char brand[50];
+    char colour[30];
+    float price;
+};
+
+int main() {
+    struct Bag myBag;
+
+    myBag.size = 15;
+    snprintf(myBag.brand, sizeof(myBag.brand), "Nike");
+    snprintf(myBag.colour, sizeof(myBag.colour), "Red");
+    myBag.price = 49.99;
+
+    printf("Size: %d\n", myBag.size);
+    printf("Brand: %s\n", myBag.brand);
+    printf("Colour: %s\n", myBag.colour);
+    printf("Price: %.2f\n", myBag.price);
+
+    return 0;
+}
+
